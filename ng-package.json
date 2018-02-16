@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "ng-util",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": false,
+  "lib": {
+    "entryFile": "src/app/modules/util/public_api.ts"
+  }
+}
