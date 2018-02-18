@@ -1,7 +1,21 @@
 {
   "name": "ng-util",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opencodes/ng-util"
+  },
+  "keywords": [
+    "ng-util",
+    "Angular Utility Library"
+  ],
+  "author": "rkjha.it.in@gmail.com",
+  "bugs": {
+    "url": "https://github.com/opencodes/ng-util/issues"
+  },
+  "homepage": "https://github.com/opencodes/ng-util/wiki",
+  "description": "An angular utility library to provide helper functions which we need in a regular development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -24,6 +38,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "ngx-pagination": "^3.1.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
