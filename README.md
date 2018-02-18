@@ -1,1 +1,1 @@
-# ng-util
+# ng-util v0.0.4
