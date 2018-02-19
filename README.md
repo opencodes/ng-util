@@ -6,7 +6,7 @@ The [ng-util](https://opencodes.github.io/ng-util/) library export lots of utili
 
 ## Installation
 ```shell
-$ npm instal ng-util
+$ npm install ng-util
 ```
 ## Usage
 
