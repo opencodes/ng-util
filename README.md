@@ -8,3 +8,27 @@ The [ng-util](https://opencodes.github.io/ng-util/) library export lots of utili
 ```shell
 $ npm instal ng-util
 ```
+## Usage
+
+```shell
+import { Component } from '@angular/core';
+import { StringUtilService } from 'ng-util';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  providers:[StringUtilService]
+})
+export class AppComponent {
+  query: string;
+  title = 'app';
+
+
+  constructor(private strUtil: StringUtilService) {
+    this.query = this.strUtil.jsonToQueryString({
+      id: 10,
+      name: 'Rajesh'
+    });
+  }
+}
+```
