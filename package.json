@@ -24,7 +24,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pkg": "ng-packagr -p ng-package.json",
-    "semantic-release": "semantic-release pre && npm publish dist && semantic-release post"
+    "doc": "compodoc -p src/tsconfig.doc.json -d ./docs"
   },
   "private": false,
   "dependencies": {
