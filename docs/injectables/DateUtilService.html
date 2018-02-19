@@ -156,12 +156,6 @@
                         <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
                     </li>
             
-                    <li class="divider"></li>
-                    <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                        <img src="../images/compodoc-vectorise.svg" class="img-responsive">
-                            </a>
-                    </li>
             
                 </ul>
             
@@ -309,12 +303,6 @@
                                <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
                            </li>
                    
-                           <li class="divider"></li>
-                           <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                               <img src="../images/compodoc-vectorise.svg" class="img-responsive">
-                                   </a>
-                           </li>
                    
                        </ul>
                    
@@ -339,9 +327,6 @@
     </li>
 
 
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 </ul>
 
 <div class="tab-content">
@@ -392,11 +377,6 @@
             <code>constructor(_strUtilSvc: <a href="../injectables/NumberUtilService.html">NumberUtilService</a>, _numberUtilSvc: <a href="../injectables/NumberUtilService.html">NumberUtilService</a>)</code>
                                 </td>
                             </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/modules/util/service/date-util.service.ts:6</a></div>
-                                        </td>
-                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
@@ -469,11 +449,6 @@
                             </tr>
             
             
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/modules/util/service/date-util.service.ts:50</a></div>
-                                        </td>
-                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
@@ -553,11 +528,6 @@
                             </tr>
             
             
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/modules/util/service/date-util.service.ts:40</a></div>
-                                        </td>
-                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
@@ -620,11 +590,6 @@
                             </tr>
             
             
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/modules/util/service/date-util.service.ts:14</a></div>
-                                        </td>
-                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
@@ -673,68 +638,6 @@
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers"><code class="language-typescript">import { StringUtilService } from &#x27;./string-util.service&#x27;;
-import { Injectable } from &#x27;@angular/core&#x27;;
-import { NumberUtilService } from &#x27;./number-util.service&#x27;;
-
-@Injectable()
-export class DateUtilService {
-
-  constructor(private _strUtilSvc: NumberUtilService, private _numberUtilSvc: NumberUtilService) { }
-
-  /**
-   * toMysqlFormat
-   * @param dateStr
-   */
-  toMysqlFormat(dateStr) {
-    const dateObj &#x3D; new Date(dateStr);
-    console.log(dateObj);
-    const d &#x3D; new Date();
-    dateObj.setUTCDate(dateObj.getUTCDate() + 1);
-    let newDate &#x3D; &#x27;&#x27;;
-    newDate +&#x3D; dateObj.getUTCFullYear();
-    newDate +&#x3D; &#x27;-&#x27;;
-    newDate +&#x3D; this._numberUtilSvc.twoDigits(1 + dateObj.getUTCMonth());
-    newDate +&#x3D; &#x27;-&#x27;;
-    const dat &#x3D; dateObj.getUTCDate();
-    newDate +&#x3D; this._numberUtilSvc.twoDigits(dateObj.getUTCDate());
-    newDate +&#x3D; &#x27; &#x27;;
-    newDate +&#x3D; this._numberUtilSvc.twoDigits(dateObj.getUTCHours());
-    newDate +&#x3D; &#x27;:&#x27;;
-    newDate +&#x3D; this._numberUtilSvc.twoDigits(dateObj.getUTCMinutes());
-    newDate +&#x3D; &#x27;:&#x27;;
-    newDate +&#x3D; this._numberUtilSvc.twoDigits(dateObj.getUTCSeconds());
-
-    console.log(newDate);
-    return newDate;
-  }
-  /**
-   * toMysqlDate
-   * @param dateStr
-   */
-  toMysqlDate(dateStr) {
-    const dateObj &#x3D; new Date(dateStr);
-    return dateObj.getUTCFullYear() + &#x27;-&#x27; + this._numberUtilSvc.twoDigits(1 + dateObj.getUTCMonth()) + &#x27;-&#x27;
-      + this._numberUtilSvc.twoDigits(dateObj.getUTCDate());
-  }
-  /**
-   * nextMonth
-   * @param dateStr
-   * @param n
-   */
-  nextMonth(dateStr: string, n: number) {
-    const dateObj &#x3D; new Date(dateStr);
-    console.log(dateObj.toDateString());
-    dateObj.setMonth(dateObj.getMonth() + n, dateObj.getDate());
-    console.log(dateObj.toDateString());
-    return dateObj.getUTCFullYear() + &#x27;-&#x27; + this._numberUtilSvc.twoDigits(1 + dateObj.getUTCMonth()) + &#x27;-&#x27;
-      + this._numberUtilSvc.twoDigits(dateObj.getUTCDate());
-
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

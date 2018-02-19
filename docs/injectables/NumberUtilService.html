@@ -156,12 +156,6 @@
                         <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
                     </li>
             
-                    <li class="divider"></li>
-                    <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                        <img src="../images/compodoc-vectorise.svg" class="img-responsive">
-                            </a>
-                    </li>
             
                 </ul>
             
@@ -309,12 +303,6 @@
                                <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
                            </li>
                    
-                           <li class="divider"></li>
-                           <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                               <img src="../images/compodoc-vectorise.svg" class="img-responsive">
-                                   </a>
-                           </li>
                    
                        </ul>
                    
@@ -339,9 +327,6 @@
     </li>
 
 
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 </ul>
 
 <div class="tab-content">
@@ -386,11 +371,6 @@
             <code>constructor()</code>
                                 </td>
                             </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app/modules/util/service/number-util.service.ts:4</a></div>
-                                        </td>
-                                    </tr>
             
                         </tbody>
                     </table>
@@ -421,11 +401,6 @@
                             </tr>
             
             
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/modules/util/service/number-util.service.ts:11</a></div>
-                                        </td>
-                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
@@ -474,25 +449,6 @@
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-
-@Injectable()
-export class NumberUtilService {
-
-  constructor() { }
-  /**
-   * Convert number into zerofill
-   * @param d
-   */
-  twoDigits(d) {
-    if (0 &lt;&#x3D; d &amp;&amp; d &lt; 10) { return &#x27;0&#x27; + d.toString(); }
-    if (-10 &lt; d &amp;&amp; d &lt; 0) { return &#x27;-0&#x27; + (-1 * d).toString(); }
-    return d.toString();
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 
