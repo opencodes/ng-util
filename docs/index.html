@@ -324,10 +324,32 @@
                    <div class="content-data">
 
 <h1 id="ng-util-v0-0-4">ng-util v0.0.4</h1>
-<p><a href="https://opencodes.github.io/ng-util/">Site</a> |<a href="https://opencodes.github.io/ng-util/">Docs</a>  |<a href="https://github.com/opencodes/ng-util/wiki" title="Changelog, Roadmap, etc.">Wiki</a> </p>
+<p><a href="https://opencodes.github.io/ng-util/">Site</a> | <a href="https://opencodes.github.io/ng-util/">Docs</a>  | <a href="https://github.com/opencodes/ng-util/wiki" title="Changelog, Roadmap, etc.">Wiki</a> </p>
 <p>The <a href="https://opencodes.github.io/ng-util/">ng-util</a> library export lots of utility functions which you need in your day-to-day angular app development. Our main intent is to make developer life easy by saving lots of time which we spent on googling and finding the right code or reinventing the wheel. </p>
 <h2 id="installation">Installation</h2>
-<pre class="line-numbers"><code class="language-shell">$ npm instal ng-util</code></pre>
+<pre class="line-numbers"><code class="language-shell">$ npm instal ng-util</code></pre><h2 id="usage">Usage</h2>
+<pre class="line-numbers"><code class="language-shell">import { Component } from &#39;&#64;angular/core&#39;;
+import { StringUtilService } from &#39;ng-util&#39;;
+&#64;Component({
+  selector: &#39;app-root&#39;,
+  templateUrl: &#39;./app.component.html&#39;,
+  styleUrls: [&#39;./app.component.css&#39;],
+  providers:[StringUtilService]
+})
+export class AppComponent {
+  query: string;
+  title = &#39;app&#39;;
+
+
+  constructor(private strUtil: StringUtilService) {
+    this.query = this.strUtil.jsonToQueryString({
+      id: 10,
+      name: &#39;tom&#39;
+    });
+  }
+}</code></pre><pre class="line-numbers"><code class="language-shell">&lt;h2&gt;Query:{{ query }}! &lt;/h2&gt;</code></pre><h4 id="output-">Output:</h4>
+<p>Query: ?id=10&amp;name=tom</p>
+
 
 
 
