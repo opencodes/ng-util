@@ -1,4 +1,4 @@
-# ng-util v0.0.4
+# ng-util v0.0.5
 
 [Site](https://opencodes.github.io/ng-util/) | [Docs](https://opencodes.github.io/ng-util/)  | [Wiki](https://github.com/opencodes/ng-util/wiki "Changelog, Roadmap, etc.") 
 
